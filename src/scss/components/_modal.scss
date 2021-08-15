@@ -1,0 +1,237 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $white;
+  height: 100vh;
+  width: 100vw;
+
+  &__calendar {
+    height: auto;
+    width: auto;
+    box-shadow: 10px 10px $boxShadow;
+    border-radius: 22px;
+    overflow: hidden;
+    margin-top: 4%;
+
+    @media #{$small-mobile} {
+      margin-top: 20% !important;
+      height: 60%;
+      width: 90% !important;
+      margin: auto !important;
+      margin-top: 10% !important;
+    }
+
+    @media #{$mobile} {
+      margin-top: 20% !important;
+      height: 60%;
+      width: 90% !important;
+    }
+
+    @media #{$tablet} {
+      margin-top: 10% !important;
+      width: 90% !important;
+      height: 70% !important;
+    }
+
+    @media #{$desktop} {
+      height: 70% !important;
+    }
+
+    @media #{$desktop-l} {
+      width: 40% !important;
+      height: 80% !important;
+      margin: 0 auto;
+      margin-top: 1% !important;
+    }
+
+    @media #{$mobile} {
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &--low,
+    &--normal,
+    &--high {
+      height: 30%;
+      width: 100%;
+
+      @media #{$small-mobile} {
+        height: 35%;
+      }
+      @media #{$tablet} {
+        height: 30%;
+      }
+      @media #{$desktop} {
+        height: 30%;
+      }
+      @media #{$desktop-l} {
+        height: 35%;
+      }
+    }
+    &--low {
+      background-color: $blue;
+      width: 100%;
+    }
+    &--normal {
+      background-color: $yellow;
+    }
+    &--high {
+      background-color: $red;
+    }
+  }
+
+  &__date {
+    width: 100%;
+    font-size: 2.5rem;
+    color: $white;
+    display: inline-block;
+    text-align: center;
+
+    &--month {
+      @media #{$tablet} {
+        margin-top: 6%;
+        font-size: 4rem;
+      }
+      @media #{$desktop} {
+        margin-top: 6%;
+        font-size: 4rem;
+      }
+      @media #{$desktop-l} {
+        margin-top: 6%;
+        font-size: 3rem;
+      }
+    }
+    &--day {
+      @media #{$tablet} {
+        margin-top: 1%;
+        font-size: 4rem;
+      }
+      @media #{$desktop} {
+        margin-top: 1%;
+        font-size: 4rem;
+      }
+      @media #{$desktop-l} {
+        margin-top: 1%;
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    text-decoration: underline;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5em;
+    @media #{$small-mobile} {
+      height: 10%;
+      padding-bottom: 5%;
+    }
+    @media #{$mobile} {
+      height: 10%;
+      padding-bottom: 10%;
+    }
+    @media #{$desktop-l} {
+      height: 10%;
+      padding-bottom: 5% !important;
+    }
+  }
+  &__description {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    word-wrap: break-word;
+    height: 44%;
+    font-size: 1.5em;
+    color: gray;
+    overflow-y: scroll;
+    @media #{$tablet} {
+      margin-top: 1%;
+      font-size: 2.5em;
+    }
+    @media #{$desktop} {
+      margin-top: 1%;
+      font-size: 3em;
+    }
+    @media #{$desktop-l} {
+      margin-top: 1%;
+      font-size: 1.5em;
+    }
+  }
+  &__buttons {
+    display: inline-flex;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+
+    @media #{$small-mobile} {
+      margin-top: 15%;
+      justify-content: space-around;
+    }
+
+    @media #{$mobile} {
+      height: 10%;
+      margin-top: 30%;
+      justify-content: space-evenly;
+    }
+    @media #{$tablet} {
+      width: 100%;
+      height: 10%;
+      margin-top: 30%;
+    }
+    @media #{$desktop} {
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 30%;
+    }
+    @media #{$desktop-l} {
+      width: 50% !important;
+      margin-top: 13% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    &--red {
+      height: 50px;
+      width: 40%;
+      font-weight: bold;
+      color: $red;
+      border: none;
+      outline: none;
+      border-radius: 22px;
+      background-color: transparent;
+      border: 2px solid $red;
+      transition: background-color 0.3s, color 0.3s, width 0.3s;
+
+      @media #{$mobile} {
+        margin-top: -20%;
+        height: 70%;
+        width: 40%;
+      }
+
+      &:hover {
+        width: 100%;
+        background-color: $redHover;
+        background-position: 50%;
+        color: $white;
+        cursor: pointer;
+
+        @media #{$mobile} {
+          width: 100%;
+        }
+        @media #{$desktop-l} {
+          width: 100%;
+        }
+      }
+      @media #{$tablet} {
+        width: 30%;
+      }
+    }
+  }
+}

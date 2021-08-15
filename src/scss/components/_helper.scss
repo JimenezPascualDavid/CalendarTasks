@@ -1,0 +1,21 @@
+.open {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+
+  &__modal {
+    height: 55px;
+    width: 55px;
+    border-radius: 100%;
+    margin: 22px;
+    font-size: 33px;
+    background-color: $red;
+    color: $white;
+    border: none;
+
+    &:hover {
+      background-color: $redHover;
+      cursor: pointer;
+    }
+  }
+}

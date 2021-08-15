@@ -1,0 +1,78 @@
+.tasks {
+  justify-content: center;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+
+  &__advise {
+    text-shadow: 2px 5px 5px $textShadow;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 22px;
+    color: $gray;
+    font-weight: bold;
+
+    &--button {
+      height: 40px;
+      width: 40px;
+      border-radius: 100%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      background-color: $red;
+      color: $white;
+    }
+  }
+
+  &__minitask {
+    width: 100px;
+    height: 100px;
+    border-radius: 22px;
+    box-shadow: 10px 10px $boxShadow;
+    overflow: hidden;
+    margin: 0;
+    margin-top: 2%;
+
+    &--high {
+      height: 40%;
+      color: $white;
+      text-align: center;
+      font-size: 22px;
+      background-color: $red;
+    }
+    &--low {
+      height: 40%;
+      color: $white;
+      text-align: center;
+      font-size: 22px;
+      background-color: $blue;
+    }
+    &--normal {
+      height: 40%;
+      color: $white;
+      text-align: center;
+      font-size: 22px;
+      background-color: $yellow;
+    }
+    &--month {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    &--day {
+      font-size: 33px;
+      text-align: center;
+      height: 100px;
+      margin-top: 10%;
+    }
+  }
+
+  &__advise {
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80%;
+    font-weight: bold;
+  }
+}

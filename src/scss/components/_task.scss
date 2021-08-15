@@ -1,0 +1,244 @@
+.form {
+  height: 100%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media #{$mobile} {
+    margin-top: 2% !important;
+  }
+  @media #{$tablet} {
+    margin-top: 5% !important;
+  }
+  @media #{$desktop} {
+    margin-top: 10% !important;
+  }
+  @media #{$desktop-l} {
+    margin-top: 0% !important;
+  }
+
+  &__alert {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $red;
+    height: auto;
+    width: 90%;
+    top: 20%;
+    border-radius: 22px;
+
+    @media #{$small-mobile} {
+      height: 50%;
+      width: 60%;
+    }
+
+    @media #{$tablet} {
+      height: 45%;
+      width: 60%;
+    }
+    @media #{$desktop} {
+      height: 45%;
+      width: 60%;
+    }
+    @media #{$desktop-l} {
+      height: 60%;
+      width: 30%;
+    }
+
+    &--info {
+      border-bottom: 5px solid $white;
+    }
+    &--text {
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 2px 5px 2px $textShadow;
+      color: $white;
+      margin-top: 10%;
+    }
+  }
+
+  &__task {
+    height: auto;
+    width: auto;
+    box-shadow: 10px 10px $boxShadow;
+    border-radius: 22px;
+    overflow: hidden;
+    margin-top: 4%;
+
+    @media #{$mobile} {
+      width: 100% !important;
+      height: 55vh;
+    }
+
+    @media #{$tablet} {
+      width: 100%;
+      height: 70vh !important;
+    }
+
+    @media #{$desktop} {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    @media #{$desktop-l} {
+      width: 50% !important;
+      height: 68vh !important;
+      margin: 0 auto;
+    }
+
+    &--low,
+    &--normal,
+    &--high {
+      height: 20%;
+      width: 100%;
+    }
+    &--low {
+      background-color: $blue;
+      width: 100%;
+    }
+    &--normal {
+      background-color: $yellow;
+    }
+    &--high {
+      background-color: $red;
+    }
+  }
+
+  &__field {
+    text-align: center;
+    margin-top: 2%;
+    height: auto;
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    text-align: center;
+
+    &--title {
+      border: none;
+      outline: none;
+      text-align: center;
+      height: 20%;
+      width: 100%;
+      padding: 0;
+      font-size: 30px;
+
+      @media #{$mobile} {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--day {
+      border: none;
+      outline: none;
+      color: $white;
+      font-size: 46px;
+      font-weight: bold;
+      background-color: transparent;
+      text-align: center;
+      width: 90%;
+      height: 40px;
+      margin-top: 4%;
+      &::placeholder {
+        color: $white;
+      }
+      @media #{$mobile} {
+        margin-top: 5%;
+      }
+      @media #{$desktop} {
+        margin-top: 10%;
+      }
+      @media #{$desktop-l} {
+        margin-top: 2%;
+      }
+    }
+  }
+  &__textarea {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    resize: none;
+    width: 90%;
+    height: 180px;
+    overflow-y: auto;
+  }
+  &__select {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 30px;
+    text-align-last: center;
+    font-size: 18px;
+    color: $gray;
+
+    &--option {
+      font-size: 16px;
+    }
+  }
+  &__options {
+    height: 150px;
+    width: 100%;
+    box-shadow: 10px 10px $boxShadow;
+    border-radius: 22px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 5%;
+
+    @media #{$mobile} {
+      margin-top: 15%;
+      width: 100% !important;
+    }
+
+    @media #{$tablet} {
+      margin-top: 10% !important;
+    }
+
+    @media #{$desktop} {
+      width: 600px;
+      margin: 0 auto;
+      margin-top: 10%;
+    }
+
+    @media #{$desktop-l} {
+      width: 85vh !important;
+      margin: 0 auto;
+      margin-top: 1% !important;
+    }
+
+    &--title {
+      padding: 11px;
+      font-weight: bold;
+      color: $gray;
+    }
+
+    &--submit {
+      position: relative;
+      top: 20%;
+      bottom: 0;
+      height: 20%;
+      width: 50%;
+      border-radius: 22px;
+      color: $red;
+      background-color: transparent;
+      border: 1px solid $red;
+      transition: background-color 0.3s, color 0.3s, width 0.3s;
+
+      &:hover {
+        width: 90%;
+        background-color: $redHover;
+        background-position: 50%;
+        color: $white;
+        cursor: pointer;
+      }
+    }
+  }
+}
