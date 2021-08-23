@@ -1,3 +1,4 @@
+
 .modal {
   position: fixed;
   top: 0;
@@ -9,49 +10,36 @@
   width: 100vw;
 
   &__calendar {
-    height: auto;
-    width: auto;
+    height: 350px;
+    width: 90vw;
+    max-width: 400px;
+    max-height: 700px;
     box-shadow: 10px 10px $boxShadow;
     border-radius: 22px;
     overflow: hidden;
-    margin-top: 4%;
-
-    @media #{$small-mobile} {
-      margin-top: 20% !important;
-      height: 60%;
-      width: 90% !important;
-      margin: auto !important;
-      margin-top: 10% !important;
-    }
-
-    @media #{$mobile} {
-      margin-top: 20% !important;
-      height: 60%;
-      width: 90% !important;
-    }
-
-    @media #{$tablet} {
-      margin-top: 10% !important;
-      width: 90% !important;
-      height: 70% !important;
-    }
-
-    @media #{$desktop} {
-      height: 70% !important;
-    }
-
-    @media #{$desktop-l} {
-      width: 40% !important;
-      height: 80% !important;
-      margin: 0 auto;
-      margin-top: 1% !important;
-    }
-
-    @media #{$mobile} {
-      width: 75%;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+  @media #{$mobile} {
+      height: 80vh;
+      margin-top: 2%;
+  }
+  @media #{$mobile-l} {
+    height: 80vh;
+    margin-top: 2%;
+}
+  @media #{$tablet} {
+    height: 85vh ;
+    max-width: 400px;
+    margin-top: 1%;
+}
+    // @media #{$desktop} {
+    //   //  height: 100vh ;
+    //    background-color: aqua;
+    //  }
+    //  @media #{$desktop-xl} {
+    //   max-width: 600px;
+    //  }
 
     &--low,
     &--normal,
@@ -59,18 +47,6 @@
       height: 30%;
       width: 100%;
 
-      @media #{$small-mobile} {
-        height: 35%;
-      }
-      @media #{$tablet} {
-        height: 30%;
-      }
-      @media #{$desktop} {
-        height: 30%;
-      }
-      @media #{$desktop-l} {
-        height: 35%;
-      }
     }
     &--low {
       background-color: $blue;
@@ -86,38 +62,31 @@
 
   &__date {
     width: 100%;
-    font-size: 2.5rem;
+    // font-size: 2.5rem;
     color: $white;
     display: inline-block;
     text-align: center;
 
     &--month {
-      @media #{$tablet} {
-        margin-top: 6%;
-        font-size: 4rem;
-      }
-      @media #{$desktop} {
-        margin-top: 6%;
-        font-size: 4rem;
-      }
-      @media #{$desktop-l} {
-        margin-top: 6%;
-        font-size: 3rem;
-      }
+      margin-top: 2%;
+
+      @media #{$small-mobile} { 
+        @include text-settings('xl');
+       }
+       @media #{$desktop} { 
+        @include text-settings('xxl');
+       }
+      
     }
     &--day {
-      @media #{$tablet} {
-        margin-top: 1%;
-        font-size: 4rem;
-      }
-      @media #{$desktop} {
-        margin-top: 1%;
-        font-size: 4rem;
-      }
-      @media #{$desktop-l} {
-        margin-top: 1%;
-        font-size: 3rem;
-      }
+      background-color: inherit;
+
+      @media #{$small-mobile} { 
+        @include text-settings('xl');
+       }
+       @media #{$desktop} { 
+        @include text-settings('xxl');
+       }
     }
   }
 
@@ -128,19 +97,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3.5em;
-    @media #{$small-mobile} {
-      height: 10%;
-      padding-bottom: 5%;
-    }
-    @media #{$mobile} {
-      height: 10%;
-      padding-bottom: 10%;
-    }
-    @media #{$desktop-l} {
-      height: 10%;
-      padding-bottom: 5% !important;
-    }
+    padding: 2%;
+    @media #{$small-mobile} { 
+      @include text-settings('xl');
+     }
   }
   &__description {
     margin-left: auto;
@@ -148,57 +108,43 @@
     width: 90%;
     word-wrap: break-word;
     height: 44%;
-    font-size: 1.5em;
+    font-size: 5vw;
     color: gray;
     overflow-y: scroll;
-    @media #{$tablet} {
-      margin-top: 1%;
-      font-size: 2.5em;
-    }
-    @media #{$desktop} {
-      margin-top: 1%;
-      font-size: 3em;
-    }
-    @media #{$desktop-l} {
-      margin-top: 1%;
-      font-size: 1.5em;
-    }
+    margin-top: 1%;
+    @include text-settings('m');
+    // @media #{$small-mobile} { 
+    //   @include text-settings('l');
+    //  }
   }
   &__buttons {
     display: inline-flex;
-    width: 100%;
-    height: 40%;
+    width: 100vw;
+    max-width: 400px;
+    height: 9vh;
     display: flex;
-    justify-content: center;
-
-    @media #{$small-mobile} {
-      margin-top: 15%;
-      justify-content: space-around;
-    }
-
+    justify-content: space-around;
+    margin-top: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+  
     @media #{$mobile} {
-      height: 10%;
-      margin-top: 30%;
-      justify-content: space-evenly;
+      margin-top: 20vh;
+    }
+    @media #{$mobile-l} {
+      margin-top: 22vh;
     }
     @media #{$tablet} {
-      width: 100%;
-      height: 10%;
-      margin-top: 30%;
+      justify-content: space-between;
     }
     @media #{$desktop} {
-      width: 100%;
-      margin: 0 auto;
-      margin-top: 30%;
+      margin-top: 20vh;
     }
-    @media #{$desktop-l} {
-      width: 50% !important;
-      margin-top: 13% !important;
-      margin-left: auto !important;
-      margin-right: auto !important;
-    }
+    // @media #{$desktop-xl} {
+    //   margin-top: 18vh;
+    // }
     &--red {
-      height: 50px;
+      height: 8vh;
       width: 40%;
       font-weight: bold;
       color: $red;
@@ -208,29 +154,28 @@
       background-color: transparent;
       border: 2px solid $red;
       transition: background-color 0.3s, color 0.3s, width 0.3s;
-
+      @include text-settings('s');
+      
       @media #{$mobile} {
         margin-top: -20%;
-        height: 70%;
-        width: 40%;
+        // height: 8vh;
+        // width: 40%;
       }
-
+      @media #{$tablet} {
+        margin-top: -22%;
+      }
+      @media #{$desktop} {
+        margin-top: -30%;
+      }
+      @media #{$desktop-l} {
+        margin-top: -25%;
+      }
       &:hover {
         width: 100%;
         background-color: $redHover;
         background-position: 50%;
         color: $white;
         cursor: pointer;
-
-        @media #{$mobile} {
-          width: 100%;
-        }
-        @media #{$desktop-l} {
-          width: 100%;
-        }
-      }
-      @media #{$tablet} {
-        width: 30%;
       }
     }
   }

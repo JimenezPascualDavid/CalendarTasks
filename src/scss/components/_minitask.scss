@@ -5,13 +5,20 @@
   grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
 
   &__advise {
+    justify-self: center;
+    align-self: center;
     text-shadow: 2px 5px 5px $textShadow;
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 22px;
+    font-size: 5vw;
     color: $gray;
     font-weight: bold;
+    height: 22vh;
+    margin: 0;
+
+    
+    @media #{$desktop-l} {
+    margin-top: 50% !important;
+     font-size: 3vw;
+    }
 
     &--button {
       height: 40px;
