@@ -8,10 +8,10 @@ $boxShadow:  rgba(90, 90, 90, 0.523);
 $textShadow: rgba(88, 88, 88, 0.3);
 
 
-$small-mobile: "(min-width: 20em)";
-$mobile: "(min-width: 23.4375em)"; 
-$mobile-l: "(min-width: 35.5em)"; 
-$tablet: "(min-width: 48em)"; 
-$desktop: "(min-width: 64em)";
-$desktop-l: "(min-width: 85.375em)"; 
-$desktop-xl: "(min-width: 105em)"; 
+$small-mobile: "(min-width: 20em)";//320px
+$mobile: "(min-width: 23.4375em)"; // 375px
+$mobile-l: "(min-width: 35.5em)"; // 568px
+$tablet: "(min-width: 48em)"; // 768px
+$desktop: "(min-width: 64em)"; // 1024px
+$desktop-l: "(min-width: 85.375em)"; // 1366px
+$desktop-xl: "(min-width: 105em)"; // 1680px

@@ -10,33 +10,22 @@
 
 }
 .modal {
-  height: 450px;
+  height: 350px;
   width: 90%;
   margin: 0 auto;
   box-shadow: 10px 10px 15px $boxShadow;
   border-radius: 22px;
   overflow: hidden;
-  margin-top: 50%;
+   margin-top: 5%;
 
   @media #{$mobile} {
-    margin-top: 20%;
-    height: 60vh;
+    margin-top: 2%;
     max-width: 400px;
   }
-  @media #{$mobile-l} {
-    margin-top: 10%;
-    height: 65vh;
-    max-width: 400px;
-  }
-  @media #{$tablet} {
-    margin-top: 5%;
-    height: 70vh;
-  }
+ 
 
   @media #{$desktop} {
-     margin-top: 2%;
-     height: 75vh;
-     max-width: 500px;
+    height: 80vh;
   }
   &__header {
     width: 100%;
@@ -62,7 +51,7 @@
     margin: 0;
     @include text-settings("l");
     @media #{$desktop} {
-      @include text-settings("xxl");
+      @include text-settings("xl");
     }
   }
   &__day {
@@ -70,7 +59,7 @@
     margin: 0;
     @include text-settings("l");
     @media #{$desktop} {
-      @include text-settings("xxl");
+      @include text-settings("xl");
     }
   }
 
