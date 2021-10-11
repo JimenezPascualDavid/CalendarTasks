@@ -10,35 +10,39 @@ const tarea = ({ verTarea, selectMostrar, eliminarTarea }) => {
   };
 
   return (
+    <div className="task">
     <div className="modal">
-      <div className="modal__calendar">
+      <div className="modal__header">
         <div
           className={
             prioridad === "low"
-              ? "modal__calendar--low"
+              ? "modal__header--low"
               : "" || prioridad === "normal"
-              ? "modal__calendar--normal"
+              ? "modal__header--normal"
               : "" || prioridad === "high"
-              ? "modal__calendar--high"
+              ? "modal__header--high"
               : "" || prioridad
-              ? "modal__calendar--low"
+              ? "modal__header--low"
               : ""
           }
         >
           <div className="modal__date">
-            <div className="modal__date--month">{mes}</div>
-            <div className="modal__date--day">{dia}</div>
+            <p className="modal__month">{mes}</p>
+            <p className="modal__day">{dia}</p>
           </div>
         </div>
+        <div className="modal__content">
         <div className="modal__title">{titulo}</div>
         <div className="modal__description">{descripcion}</div>
       </div>
-      <div className="modal__buttons">
-        <button className="modal__buttons--red" onClick={volver}>
+    </div>
+    </div>
+    <div className="content">
+        <button className="content__buttons content__buttons--red" onClick={volver}>
           Volver
         </button>
         <button
-          className="modal__buttons--red"
+          className="content__buttons content__buttons--red"
           onClick={() => eliminarTarea(id)}
         >
           Eliminar tarea

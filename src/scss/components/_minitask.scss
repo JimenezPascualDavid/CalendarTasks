@@ -2,22 +2,26 @@
   justify-content: center;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
-
+  grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
+  margin: 5%;
+ 
   &__advise {
-    justify-self: center;
-    align-self: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top:40%;
+    margin: 0 auto;
+    text-align: center;
     text-shadow: 2px 5px 5px $textShadow;
-    font-size: 5vw;
     color: $gray;
     font-weight: bold;
-    height: 22vh;
-    margin: 0;
 
-    
-    @media #{$desktop-l} {
-    margin-top: 50% !important;
-     font-size: 3vw;
+    @media #{$mobile-l} {
+    @include text-settings('s');
+    }
+    @media #{$tablet} {
+    @include text-settings('m');
     }
 
     &--button {
@@ -34,38 +38,34 @@
   }
 
   &__minitask {
-    width: 100px;
+    width:100px;
     height: 100px;
     border-radius: 22px;
-    box-shadow: 10px 10px $boxShadow;
+    box-shadow: 10px 10px 15px $boxShadow;
     overflow: hidden;
     margin: 0;
     margin-top: 2%;
+    justify-self: center;
 
-    &--high {
+    &--high ,&--low ,&--normal{
       height: 40%;
       color: $white;
       text-align: center;
       font-size: 22px;
+    }
+    &--high {
       background-color: $red;
     }
     &--low {
-      height: 40%;
-      color: $white;
-      text-align: center;
-      font-size: 22px;
       background-color: $blue;
     }
     &--normal {
-      height: 40%;
-      color: $white;
-      text-align: center;
-      font-size: 22px;
       background-color: $yellow;
     }
     &--month {
       text-overflow: ellipsis;
       overflow: hidden;
+      padding: 10px;
     }
     &--day {
       font-size: 33px;
@@ -73,13 +73,5 @@
       height: 100px;
       margin-top: 10%;
     }
-  }
-
-  &__advise {
-    margin: 0 auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 80%;
-    font-weight: bold;
   }
 }

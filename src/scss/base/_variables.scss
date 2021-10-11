@@ -4,32 +4,8 @@ $red: rgb(221, 54, 54);
 $redHover: rgb(209, 24, 24);
 $white: rgb(255, 255, 255);
 $gray: rgb(128, 128, 128);
-$boxShadow: rgba(90, 90, 90, 0.623);
+$boxShadow:  rgba(90, 90, 90, 0.523);
 $textShadow: rgba(88, 88, 88, 0.3);
-
-// $small-mobile: "(min-width: 20em) and (max-width: 23.4374em)";
-// $mobile: "(min-width: 23.4375em)";
-// $tablet: "(min-width: 24em) and (max-width: 48em)";
-// $desktop: "(min-width: 64em)";
-// $desktop-l: "(min-width: 85.375em)"; 
-
-@mixin text-settings($size) {
-
-  @if $size == 'xs'{
-    font-size: .75rem
-  }@else if $size == 's'{
-    font-size: .875rem
-  }@else if $size == 'm'{
-    font-size: 1.25rem
-  }@else if $size == 'l'{
-    font-size: 2.25rem
-  }@else if $size == 'xl'{
-    font-size: 2.75rem
-  }@else if $size == 'xxl'{
-    font-size: 4rem
-  }
- 
-};
 
 
 $small-mobile: "(min-width: 20em)";//320px
@@ -38,34 +14,5 @@ $mobile-l: "(min-width: 35.5em)"; // 568px
 $tablet: "(min-width: 48em)"; // 768px
 $desktop: "(min-width: 64em)"; // 1024px
 $desktop-l: "(min-width: 85.375em)"; // 1366px
- $desktop-xl: "(min-width: 105em)"; // 1680px
+$desktop-xl: "(min-width: 105em)"; // 1680px
 
-
-//  %margin {
-//     margin: ($bl * 4) auto;
-  
-//     &--8 {
-//       margin: $bl auto;
-//     }
-  
-//     &--16 {
-//       margin: ($bl * 2) auto;
-//     }
-  
-//     &--24 {
-//       margin: ($bl * 3) auto;
-//     }
-  
-//     &--32 {
-//       margin: ($bl * 4) auto;
-//     }
-  
-//     &--40 {
-//       margin: ($bl * 5) auto;
-//     }
-  
-//     &--48 {
-//       margin: ($bl * 6) auto;
-//     }
-//   }
-  

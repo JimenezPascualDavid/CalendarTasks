@@ -1,40 +1,4 @@
 .form {
-  // height: 100%;
-  // width: 80%;
-  height: auto;
-  width: 55vw;
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0%;
-
-  @media #{$small-mobile} {
-    // margin-top: 0%;
-    width: 90vw;
-  }
-  // @media #{$mobile} {
-
-  //   // margin-top: 0%;
-  // }
-  // @media #{$mobile-l} {
-
-  // }
-  @media #{$tablet} {
-   
-    max-width: 600px;
-  }
-  // @media #{$desktop} {
-  //   max-width: 80vw !important;
-  // }
-  @media #{$desktop-l} {
-
-   max-width: 80vw  !important;
-  }
-  // @media #{$desktop-xl} {
-  
-  //   // max-width: 900px;
-  // }
-
   &__alert {
     position: fixed;
     left: 0;
@@ -44,27 +8,13 @@
     margin-left: auto;
     margin-right: auto;
     background-color: $red;
-    height: auto;
+    height: 40%;
     width: 90%;
     top: 20%;
     border-radius: 22px;
 
-    @media #{$small-mobile} {
-      height: 50%;
-      width: 60%;
-    }
-
-    @media #{$tablet} {
-      height: 45%;
-      width: 60%;
-    }
-    @media #{$desktop} {
-      height: 45%;
-      width: 60%;
-    }
-    @media #{$desktop-l} {
-      height: 60%;
-      width: 30%;
+    @media #{$mobile} {
+      max-width: 400px;
     }
 
     &--info {
@@ -76,36 +26,37 @@
       text-transform: uppercase;
       text-shadow: 2px 5px 2px $textShadow;
       color: $white;
-      margin-top: 10%;
     }
   }
 
   &__task {
-    height: auto;
-    width: auto;
-    box-shadow: 10px 10px $boxShadow;
+    height: 450px;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 10px 10px 15px $boxShadow;
     border-radius: 22px;
     overflow: hidden;
-    margin-top: 4%;
+    margin-top: 40%;
 
     @media #{$mobile} {
-      // width: 100% !important;
+      margin-top: 20%;
       height: 55vh;
+      max-width: 400px;
     }
 
+    @media #{$mobile-l} {
+      margin-top: 10%;
+      height: 60vh;
+      max-width: 400px;
+    }
     @media #{$tablet} {
-      height: 70vh !important;
+      margin-top: 5%;
+      height: 65vh;
+      max-width: 500px;
     }
 
     @media #{$desktop} {
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    @media #{$desktop-l} {
-      width: 50% !important;
-      height: 68vh !important;
-      margin: 0 auto;
+      margin-top: 2%;
     }
 
     &--low,
@@ -116,7 +67,6 @@
     }
     &--low {
       background-color: $blue;
-      width: 100%;
     }
     &--normal {
       background-color: $yellow;
@@ -130,6 +80,10 @@
     text-align: center;
     margin-top: 2%;
     height: auto;
+
+  }
+  &__field:first-child{
+    margin-top: 0;
   }
 
   &__input {
@@ -163,18 +117,9 @@
       text-align: center;
       width: 90%;
       height: 40px;
-      margin-top: 4%;
+      margin-top: 5%;
       &::placeholder {
         color: $white;
-      }
-      @media #{$mobile} {
-        margin-top: 5%;
-      }
-      @media #{$desktop} {
-        margin-top: 10%;
-      }
-      @media #{$desktop-l} {
-        margin-top: 2%;
       }
     }
   }
@@ -203,8 +148,8 @@
   }
   &__options {
     height: 150px;
-    width: 100%;
-    box-shadow: 10px 10px $boxShadow;
+    width: 90%;
+    box-shadow: 10px 10px 15px $boxShadow;
     border-radius: 22px;
     text-align: center;
     overflow: hidden;
@@ -212,33 +157,20 @@
     margin-left: auto;
     margin-right: auto;
 
-    @media #{$small-mobile} {
-      width: 90vw;
-    }
     @media #{$mobile} {
-    
+      margin-top: 6%;
       max-width: 400px;
     }
-    // @media #{$mobile-l} {
-    
-    // }
+
     @media #{$tablet} {
       margin-top: 3%;
-      max-width: 600px;
+      max-width: 500px;
     }
-    // @media #{$desktop} {
-    //   // margin-top: 3%;
-    //   // max-width: 700px;
-    //   max-width: 40vw !important;
-    // }
-    @media #{$desktop-l} {
-      // margin-top: 3%;
-      
-      max-width: 40vw;
+    @media #{$desktop} {
+      max-width: 500px;
     }
-    // @media #{$desktop-xl} {
-     
-      
+    // @media #{$desktop-l} {
+    //   max-width: 550px;
     // }
 
     &--title {
@@ -258,10 +190,6 @@
       background-color: transparent;
       border: 1px solid $red;
       transition: background-color 0.3s, color 0.3s, width 0.3s;
-
-      @media #{$small-mobile} {
-      margin-top: -5% !important;
-      }
 
       &:hover {
         width: 90%;

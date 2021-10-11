@@ -1,5 +1,4 @@
-
-.modal {
+.task {
   position: fixed;
   top: 0;
   right: 0;
@@ -9,48 +8,41 @@
   height: 100vh;
   width: 100vw;
 
-  &__calendar {
-    height: 350px;
-    width: 90vw;
-    max-width: 400px;
-    max-height: 700px;
-    box-shadow: 10px 10px $boxShadow;
-    border-radius: 22px;
-    overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1%;
+}
+.modal {
+  height: 450px;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 10px 10px 15px $boxShadow;
+  border-radius: 22px;
+  overflow: hidden;
+  margin-top: 50%;
+
   @media #{$mobile} {
-      height: 80vh;
-      margin-top: 2%;
+    margin-top: 20%;
+    height: 60vh;
+    max-width: 400px;
   }
   @media #{$mobile-l} {
-    height: 80vh;
-    margin-top: 2%;
-}
-  @media #{$tablet} {
-    height: 85vh ;
+    margin-top: 10%;
+    height: 65vh;
     max-width: 400px;
-    margin-top: 1%;
-}
-    // @media #{$desktop} {
-    //   //  height: 100vh ;
-    //    background-color: aqua;
-    //  }
-    //  @media #{$desktop-xl} {
-    //   max-width: 600px;
-    //  }
+  }
+  @media #{$tablet} {
+    margin-top: 5%;
+    height: 70vh;
+  }
 
-    &--low,
-    &--normal,
-    &--high {
-      height: 30%;
-      width: 100%;
+  @media #{$desktop} {
+     margin-top: 2%;
+     height: 75vh;
+     max-width: 500px;
+  }
+  &__header {
+    width: 100%;
 
-    }
     &--low {
       background-color: $blue;
-      width: 100%;
     }
     &--normal {
       background-color: $yellow;
@@ -59,48 +51,37 @@
       background-color: $red;
     }
   }
-
   &__date {
     width: 100%;
-    // font-size: 2.5rem;
     color: $white;
     display: inline-block;
     text-align: center;
-
-    &--month {
-      margin-top: 2%;
-
-      @media #{$small-mobile} { 
-        @include text-settings('xl');
-       }
-       @media #{$desktop} { 
-        @include text-settings('xxl');
-       }
-      
+  }
+  &__month {
+    padding: 5px;
+    margin: 0;
+    @include text-settings("l");
+    @media #{$desktop} {
+      @include text-settings("xxl");
     }
-    &--day {
-      background-color: inherit;
-
-      @media #{$small-mobile} { 
-        @include text-settings('xl');
-       }
-       @media #{$desktop} { 
-        @include text-settings('xxl');
-       }
+  }
+  &__day {
+    padding: 5px;
+    margin: 0;
+    @include text-settings("l");
+    @media #{$desktop} {
+      @include text-settings("xxl");
     }
   }
 
   &__title {
     text-align: center;
     text-decoration: underline;
-    height: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2%;
-    @media #{$small-mobile} { 
-      @include text-settings('xl');
-     }
+    padding: 10px;
+    @include text-settings("l");
+    @media #{$desktop} {
+      @include text-settings("xl");
+    }
   }
   &__description {
     margin-left: auto;
@@ -112,64 +93,41 @@
     color: gray;
     overflow-y: scroll;
     margin-top: 1%;
-    @include text-settings('m');
-    // @media #{$small-mobile} { 
-    //   @include text-settings('l');
-    //  }
+    @include text-settings("m");
   }
-  &__buttons {
-    display: inline-flex;
-    width: 100vw;
-    max-width: 400px;
-    height: 9vh;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 4vh;
-    margin-left: auto;
-    margin-right: auto;
+}
+.content {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  max-width: 600px;
   
+  &__buttons {
+    margin-top: 10%;
+      height: 6vh;
+      width: 40%;
     @media #{$mobile} {
-      margin-top: 20vh;
+      margin-top: 10%;
     }
     @media #{$mobile-l} {
-      margin-top: 22vh;
+      width: 30%;
     }
+    
     @media #{$tablet} {
-      justify-content: space-between;
+      max-width: 600px;
     }
-    @media #{$desktop} {
-      margin-top: 20vh;
-    }
-    // @media #{$desktop-xl} {
-    //   margin-top: 18vh;
-    // }
-    &--red {
-      height: 8vh;
-      width: 40%;
+
+    &--red { 
       font-weight: bold;
       color: $red;
       border: none;
       outline: none;
-      border-radius: 22px;
+      border-radius: 24px;
       background-color: transparent;
       border: 2px solid $red;
       transition: background-color 0.3s, color 0.3s, width 0.3s;
-      @include text-settings('s');
-      
-      @media #{$mobile} {
-        margin-top: -20%;
-        // height: 8vh;
-        // width: 40%;
-      }
-      @media #{$tablet} {
-        margin-top: -22%;
-      }
-      @media #{$desktop} {
-        margin-top: -30%;
-      }
-      @media #{$desktop-l} {
-        margin-top: -25%;
-      }
+      @include text-settings("s");
+
       &:hover {
         width: 100%;
         background-color: $redHover;

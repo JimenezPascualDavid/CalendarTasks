@@ -36,7 +36,7 @@ const Calendario = ({
 
   setTimeout(() => {
     guardarError(false);
-  }, 4000);
+  }, 84000);
 
   const recogerTarea = (e) => {
     guardarTarea({
@@ -87,14 +87,14 @@ const Calendario = ({
     <div className="form">
       {error ? (
         <div className="form__alert">
-          <p class="form__alert--info form__alert--text">
+          <p className="form__alert--info form__alert--text">
             Todos los campos son oblgatorios
           </p>
-          <p class="form__alert--text">Fecha (0-31)</p>
-          <p class="form__alert--text">Mes</p>
-          <p class="form__alert--text">Titulo</p>
-          <p class="form__alert--text">Descripcion</p>
-          <p class="form__alert--text">Prioridad</p>
+          <p className="form__alert--text">Fecha (0-31)</p>
+          <p className="form__alert--text">Mes</p>
+          <p className="form__alert--text">Titulo</p>
+          <p className="form__alert--text">Descripcion</p>
+          <p className="form__alert--text">Prioridad</p>
         </div>
       ) : (
         ""

@@ -1,0 +1,18 @@
+
+@mixin text-settings($size) {
+
+    @if $size == 'xs'{
+      font-size: .75rem
+    }@else if $size == 's'{
+      font-size: .875rem
+    }@else if $size == 'm'{
+      font-size: 1.25rem
+    }@else if $size == 'l'{
+      font-size: 2.25rem
+    }@else if $size == 'xl'{
+      font-size: 2.75rem
+    }@else if $size == 'xxl'{
+      font-size: 4rem
+    }
+  };
+  
