@@ -3,7 +3,7 @@ import React from "react";
 const tarea = ({ verTarea, selectMostrar, eliminarTarea }) => {
   const { id, dia, mes, titulo, descripcion, prioridad } = verTarea;
 
-  console.log(verTarea);
+
 
   const volver = () => {
     selectMostrar(true);

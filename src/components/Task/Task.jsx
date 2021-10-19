@@ -43,7 +43,7 @@ const Calendario = ({
       ...tarea,
       [e.target.name]: e.target.value,
     });
-    console.log(e.target.name, e.target.value);
+    
   };
 
   const { dia, mes, titulo, descripcion } = tarea;
@@ -66,7 +66,7 @@ const Calendario = ({
     tarea.prioridad = prioridad;
 
     crearTarea(tarea);
-    console.log(tarea);
+    
 
     guardarCargando(true);
 
